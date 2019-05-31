@@ -4,9 +4,17 @@
 
 
 
-## 使用软件 
+## 安排
 
 as3.4.1  jdk8 
+
+okhttp
+
+RecyclerView
+
+centos7.5
+
+
 
 ## 人员分配
 
