@@ -37,15 +37,14 @@ as3.4.1  jdk8
 
 登陆
 
-![https://pic.superbed.cn/item/5cf08904451253d17843c74e](https://pic.superbed.cn/item/5cf08904451253d17843c74e)
-
+![](https://pic.superbed.cn/item/5cf08904451253d17843c74e)
 注册
 
-![123](https://pic3.superbed.cn/item/5cf0891e451253d17843c85f)]
+![](https://pic1.superbed.cn/item/5cf0891e451253d17843c85f)
 
 主页
 
-[![123](https://pic.superbed.cn/item/5cf08941451253d17843caae)
+![](https://pic.superbed.cn/item/5cf08941451253d17843caae)
 
 分类
 
