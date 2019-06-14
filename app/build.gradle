@@ -45,4 +45,10 @@ dependencies {
 //    黄油刀
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+//okhttp
+    implementation("com.squareup.okhttp3:okhttp:3.14.2")
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 }

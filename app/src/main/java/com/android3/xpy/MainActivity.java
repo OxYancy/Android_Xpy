@@ -6,23 +6,33 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
+import com.android3.xpy.entity.Goods;
+import com.android3.xpy.entity.GoodsList;
 import com.android3.xpy.fragment.CarFragment;
 import com.android3.xpy.fragment.HomeFragment;
 import com.android3.xpy.fragment.MyFragment;
 import com.android3.xpy.fragment.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.Gson;
 import com.youth.banner.Banner;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.Call;
+
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<Fragment> fragments;
     private BottomNavigationView bottomNavigationView;
     private Banner banner;
     private List<Integer> images = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 ////        banner.setImageLoader(new GlideImageLoader(this,));
 //        banner.setImages(images);
 //        banner.start();
+
 
         fragments = new ArrayList<>();
         fragments.add(HomeFragment.newInstance());
@@ -98,4 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }

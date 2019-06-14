@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Xiaomi / 小米 Redmi K20 Pro 新品 4800 万三摄骁龙 855 ",
+      "type": "手机",
+      "price": 2499,
+      "description": "Redmi K20 Pro",
+      "icon": "https://img.alicdn.com/imgextra/i1/1714128138/O1CN01O3ezvP29zFiPoEBsB_!!1714128138.jpg_430x430q90.jpg"
+    },
+    {
+      "id": "2",
+      "type": "手机",
+      "name": "一加 7Pro  OnePlus7pro 骁龙 855",
+      "price": 4609,
+      "description": "OnePlus7 pro",
+      "icon": "https://img.alicdn.com/imgextra/i2/2432146763/O1CN01udgGPB1zpV7ZrN0Z4_!!2432146763.jpg_430x430q90.jpg"
+    },
+    {
+      "id": "3",
+      "type": "电脑配件",
+      "name": "Intel / 英特尔 酷睿 i9-9900k 盒装 CPU 8 核 16 线程 1151 针脚台式机电脑处理器 9900k",
+      "price": 3949,
+      "description": "i9-9900K",
+      "icon": "https://img.alicdn.com/imgextra/i2/2578685019/O1CN011mwkJrflslfv3Dt_!!2578685019.jpg_430x430q90.jpg"
+    },
+    {
+      "id": "4",
+      "type": "手机",
+      "name": "Apple / 苹果 iphoneXS",
+      "price": 8199,
+      "description": "iPhone XS",
+      "icon": "https://img.alicdn.com/imgextra/i3/1917047079/TB2AHQYXwDqK1RjSZSyXXaxEVXa_!!1917047079.jpg_430x430q90.jpg"
+    },
+    {
+      "id": "5 ",
+      "type": "手机",
+      "name": "Apple / 苹果 iPhone XR",
+      "price": 6199,
+      "description": "iPhone XR",
+      "icon": "https://img.alicdn.com/imgextra/i4/1917047079/O1CN0122AEDNRubJERqkK_!!1917047079.jpg_430x430q90.jpg"
+    }
+  ]
+}
