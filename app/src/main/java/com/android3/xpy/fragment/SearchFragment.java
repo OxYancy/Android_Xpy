@@ -9,6 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.android3.xpy.R;
+
+import scut.carson_ho.searchview.ICallBack;
+import scut.carson_ho.searchview.SearchView;
+import scut.carson_ho.searchview.bCallBack;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +25,8 @@ import android.widget.TextView;
  */
 public class SearchFragment extends Fragment {
 
+    private SearchView searchView;
+
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -27,9 +35,26 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
+        View view = inflater.inflate(R.layout.fragment_search,container, false);
+        searchView= view.findViewById(R.id.search_view);
+
+        searchView.setOnClickSearch(new ICallBack() {
+            @Override
+            public void SearchAciton(String string) {
+                System.out.println("我收到了" + string);
+            }
+        });
+
+        searchView.setOnClickBack(new bCallBack() {
+            @Override
+            public void BackAciton() {
+                System.out.println("back");
+            }
+        });        TextView textView = new TextView(getActivity());
+
+
         textView.setText("搜索");
-        return textView;
+        return view;
     }
 
     public static SearchFragment newInstance() {

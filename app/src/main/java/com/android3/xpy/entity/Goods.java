@@ -3,6 +3,8 @@ package com.android3.xpy.entity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * @Authur : Yancy
  * @E-mail : 986244073@qq.com
@@ -10,7 +12,7 @@ import com.google.gson.annotations.SerializedName;
  * @Desc :
  */
 
-public class Goods {
+public class Goods implements Serializable {
 
 
     @SerializedName("id")

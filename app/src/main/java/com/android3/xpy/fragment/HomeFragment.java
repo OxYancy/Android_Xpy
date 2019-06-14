@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.android3.xpy.DataLab;
 import com.android3.xpy.GlideImageLoader;
 import com.android3.xpy.GoodClickListenner;
+import com.android3.xpy.GoodsActivity;
 import com.android3.xpy.GoodsListAdapter;
 import com.android3.xpy.MainActivity;
 import com.android3.xpy.R;
@@ -66,11 +67,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v, int position) {
                 Log.i("FFPLAY", "Clicked " + view + " on " + position);
+//                Intent intent = new Intent(getActivity(), GoodsActivity.class);
+//                intent.putExtra("goods", data.get(position));
                 if (position < data.size()) {
-                    Goods g = data.get(position);
-//                    Intent intent = new Intent(MainActivity.this, LiveActivity.class);
-//                    intent.putExtra("goods", g);
-//                    startActivity(intent);
+                    Goods good = data.get(position);
+                    Intent intent = new Intent(getActivity(), GoodsActivity.class);
+                    intent.putExtra("goods", data.get(position));
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getActivity(), "无效的频道", Toast.LENGTH_SHORT);
                 }

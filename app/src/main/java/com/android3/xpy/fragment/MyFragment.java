@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.android3.xpy.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,9 +28,10 @@ public class MyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_my, container, false);
         TextView textView = new TextView(getActivity());
         textView.setText("my");
-        return textView;
+        return view;
     }
 
     public static MyFragment newInstance() {

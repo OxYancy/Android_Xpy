@@ -51,4 +51,16 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.5'
 
+//    wode yemian
+    implementation 'com.leon:lsettingviewlibrary:1.7.0'
+//    search
+    implementation 'com.kunminx.linkage:linkage-recyclerview:1.7.3'
+    implementation 'com.carson_ho:SearchLayout:1.0.1'
+
+//    //字体图标库
+//    implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+//    implementation 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+    implementation 'com.facebook.fresco:fresco:0.9.0'
+    implementation 'com.gxz.pagerslidingtabstrip:library:1.3'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
 }
