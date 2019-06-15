@@ -45,9 +45,9 @@ dependencies {
 //    黄油刀
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-//okhttp
-    implementation("com.squareup.okhttp3:okhttp:3.14.2")
-    implementation 'com.zhy:okhttputils:2.6.2'
+////okhttp
+//    implementation("com.squareup.okhttp3:okhttp:3.14.2")
+//    implementation 'com.zhy:okhttputils:2.6.2'
 
     implementation 'com.google.code.gson:gson:2.8.5'
 
@@ -63,4 +63,8 @@ dependencies {
     implementation 'com.facebook.fresco:fresco:0.9.0'
     implementation 'com.gxz.pagerslidingtabstrip:library:1.3'
     implementation 'com.bigkoo:convenientbanner:2.0.5'
+//    rx
+    implementation 'com.rxjava.rxhttp:rxhttp:1.0.8'
+//注解处理器，生成RxHttp类，即可一条链发送请求
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.0.8'
 }

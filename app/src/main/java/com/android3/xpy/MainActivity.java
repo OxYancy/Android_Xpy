@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.android3.xpy.entity.Goods;
 import com.android3.xpy.entity.GoodsList;
@@ -18,13 +19,13 @@ import com.android3.xpy.fragment.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.youth.banner.Banner;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.Call;
+import rxhttp.wrapper.param.RxHttp;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(CarFragment.newInstance());
         fragments.add(MyFragment.newInstance());
 
+
+
         final FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().add(R.id.fragment_container, fragments.get(0), "HOME")
                 .add(R.id.fragment_container, fragments.get(1), "SEARCH")
@@ -88,14 +91,14 @@ public class MainActivity extends AppCompatActivity {
                                 .show(fragments.get(1))
                                 .commit();
                         return true;
-                    case R.id.tab_car:
-                        fm.beginTransaction()
-                                .hide(fragments.get(0))
-                                .hide(fragments.get(1))
-                                .hide(fragments.get(3))
-                                .show(fragments.get(2))
-                                .commit();
-                        return true;
+//                    case R.id.tab_car:
+//                        fm.beginTransaction()
+//                                .hide(fragments.get(0))
+//                                .hide(fragments.get(1))
+//                                .hide(fragments.get(3))
+//                                .show(fragments.get(2))
+//                                .commit();
+//                        return true;
                     case R.id.tab_my:
                         fm.beginTransaction()
                                 .hide(fragments.get(0))

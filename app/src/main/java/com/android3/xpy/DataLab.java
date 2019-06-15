@@ -7,8 +7,7 @@ import android.widget.Toast;
 
 import com.android3.xpy.entity.Goods;
 import com.google.gson.Gson;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;

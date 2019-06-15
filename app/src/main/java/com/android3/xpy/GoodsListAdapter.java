@@ -73,7 +73,7 @@ public class GoodsListAdapter extends RecyclerView.Adapter<GoodsListAdapter.Good
 
         public void bind(Context context, Goods goods) {
             title.setText(goods.getName());
-            price.setText(goods.getPrice().toString());
+            price.setText("RMB："+goods.getPrice().toString());
             Glide.with(context).load(goods.getIcon()).override(320, 320).into(img);
         }
     }
