@@ -1,4 +1,4 @@
-package com.android3.xpy;
+package com.android3.xpy.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android3.xpy.R;
 import com.android3.xpy.entity.Goods;
 import com.bumptech.glide.Glide;
 

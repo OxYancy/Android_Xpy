@@ -25,6 +25,7 @@
             android:src="@drawable/my_avatar" />
 
         <TextView
+            android:id="@+id/my_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -57,4 +58,11 @@
         android:layout_height="wrap_content"
         leon:leftText="关于" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f00"
+        android:text="退出登陆"
+        android:textColor="#fff" />
 </LinearLayout>

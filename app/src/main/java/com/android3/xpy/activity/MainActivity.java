@@ -1,4 +1,4 @@
-package com.android3.xpy;
+package com.android3.xpy.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.android3.xpy.R;
 import com.android3.xpy.entity.Goods;
 import com.android3.xpy.entity.GoodsList;
 import com.android3.xpy.fragment.CarFragment;

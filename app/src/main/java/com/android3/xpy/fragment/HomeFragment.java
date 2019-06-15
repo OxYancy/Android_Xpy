@@ -8,19 +8,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android3.xpy.GlideImageLoader;
-import com.android3.xpy.GoodClickListenner;
-import com.android3.xpy.GoodsActivity;
-import com.android3.xpy.GoodsListAdapter;
-import com.android3.xpy.MainActivity;
+import com.android3.xpy.util.GlideImageLoader;
+import com.android3.xpy.util.GoodClickListenner;
+import com.android3.xpy.activity.GoodsActivity;
+import com.android3.xpy.util.GoodsListAdapter;
 import com.android3.xpy.R;
 import com.android3.xpy.entity.Goods;
 import com.android3.xpy.entity.GoodsList;
@@ -38,6 +38,7 @@ import rxhttp.wrapper.param.RxHttp;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
+    private SwipeRefreshLayout swipeRefreshLayout;
     private List<Integer> images = new ArrayList<>();
     private GoodsListAdapter listAdapter;
     private Banner banner;
@@ -64,7 +65,48 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         banner = view.findViewById(R.id.banner);
         shopList = view.findViewById(R.id.shopList);
-        Log.d("QQQQQ", "onCreateView: "+data);
+        swipeRefreshLayout = view.findViewById(R.id.refreshLayout);
+
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light, android.R.color.holo_orange_light);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+//                        data.add(0, data);
+//                        listAdapter.notifyDataSetChanged();
+                        data = httpGetJson();
+                        listAdapter.notifyDataSetChanged();
+                        listAdapter = new GoodsListAdapter(data, new GoodClickListenner() {
+                            @Override
+                            public void onClick(View v, int position) {
+                                Log.i("FFPLAY", "Clicked " + view + " on " + position);
+//                Intent intent = new Intent(getActivity(), GoodsActivity.class);
+//                intent.putExtra("goods", data.get(position));
+                                if (position < data.size()) {
+                                    Goods good = data.get(position);
+                                    Intent intent = new Intent(getActivity(), GoodsActivity.class);
+                                    intent.putExtra("goods", data.get(position));
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(getActivity(), "点击失败", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+//                        shopList.setLayoutManager(new LinearLayoutManager(getActivity()));
+                        swipeRefreshLayout.setRefreshing(false);
+
+
+                    }
+                }, 3000);
+
+            }
+
+        });
+        Log.d("QQQQQ", "onCreateView: " + data);
         listAdapter = new GoodsListAdapter(data, new GoodClickListenner() {
             @Override
             public void onClick(View v, int position) {
@@ -77,7 +119,7 @@ public class HomeFragment extends Fragment {
                     intent.putExtra("goods", data.get(position));
                     startActivity(intent);
                 } else {
-                    Toast.makeText(getActivity(), "点击失败", Toast.LENGTH_SHORT);
+                    Toast.makeText(getActivity(), "点击失败", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -110,10 +152,8 @@ public class HomeFragment extends Fragment {
 
     public List<Goods> httpGetJson() {
         List<Goods> goods = new ArrayList<>();
-        new Thread() {
-            @Override
-            public void run() {
-        String url = "https://www.easy-mock.com/mock/5cf2759064873463eb866334/sell/lists";
+        String url = "http://139.155.116.93:8080/list";
+//        String url = "https://www.easy-mock.com/mock/5cf2759064873463eb866334/sell/lists";
         RxHttp.get(url)
                 .asString()
                 .subscribe(s -> {
@@ -123,11 +163,8 @@ public class HomeFragment extends Fragment {
                     Log.d("QQ", "run: " + goods.toString());
 
                 }, throwable -> {
-                    Toast.makeText(getActivity(), "" + throwable, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "获取信息失败" + throwable, Toast.LENGTH_SHORT).show();
                 });
-            }
-        }.start();
-
         return goods;
     }
 }

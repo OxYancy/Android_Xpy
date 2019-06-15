@@ -67,4 +67,6 @@ dependencies {
     implementation 'com.rxjava.rxhttp:rxhttp:1.0.8'
 //注解处理器，生成RxHttp类，即可一条链发送请求
     annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.0.8'
+    implementation 'com.rxjava.rxlife:rxlife:1.0.6'
+
 }

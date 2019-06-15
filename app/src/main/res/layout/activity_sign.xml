@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.LoginActivity">
-
+    android:layout_height="match_parent"
+    tools:context=".activity.SignActivity">
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/userName"
+        android:id="@+id/sign_userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入账号" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/passWord"
+        android:id="@+id/sign_passWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入密码" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login"
-        android:text="登陆"
+        android:text="注册"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="login" />
-    <TextView
-        android:onClick="sign"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="没有账号?注册一个?"
         />
 </LinearLayout>

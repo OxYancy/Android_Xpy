@@ -1,4 +1,4 @@
-package com.android3.xpy;
+package com.android3.xpy.util;
 
 import android.content.Context;
 import android.util.Log;
