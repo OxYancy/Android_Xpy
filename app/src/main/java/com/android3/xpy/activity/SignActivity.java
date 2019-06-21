@@ -36,7 +36,7 @@ public class SignActivity extends AppCompatActivity {
                     Toast.makeText(SignActivity.this, "请输入账号 or 密码", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                String url = "http://139.155.116.93:8080/login/?name=" + name + "&password=" + pass;
+                String url = "http://39.105.14.128:8080/login/?name=" + name + "&password=" + pass;
                 RxHttp.get(url)
                         .asObject(User.class)
                         .as(RxLife.asOnMain(SignActivity.this))

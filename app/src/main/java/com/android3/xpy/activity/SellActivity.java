@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.android3.xpy.R;
 import com.android3.xpy.entity.Goods;
@@ -41,10 +42,11 @@ public class SellActivity extends AppCompatActivity {
                 String desc = goods_desc.getText().toString().trim();
                 String type = goode_type.getText().toString().trim();
                 String icon = goode_icon.getText().toString().trim();
-                String url = "http://139.155.116.93:8080/add?name=" + name + "&price=" + price + "&description=" + desc + "&icon=" + icon+"&type="+type;
+                String url = "http://39.105.14.128:8080/add?name=" + name + "&price=" + price + "&description=" + desc + "&icon=" + icon+"&type="+type;
                 RxHttp.get(url).asObject(Goods.class).as(RxLife.asOnMain(SellActivity.this))
                         .subscribe(s -> {
                             Log.d("q", "onClick: "+s.toString());
+                            Toast.makeText(SellActivity.this, "发布成功"+name, Toast.LENGTH_SHORT).show();
                         }, throwable -> {
                             Log.d("q", "onClick: "+throwable);
                         });

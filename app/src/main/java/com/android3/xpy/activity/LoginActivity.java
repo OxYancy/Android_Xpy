@@ -18,20 +18,25 @@ import com.rxjava.rxlife.RxLife;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import rxhttp.wrapper.param.RxHttp;
 
 public class LoginActivity extends AppCompatActivity {
     final String TAG = "Login";
-    private TextInputEditText userName;
-    private TextInputEditText passWord;
+    @BindView(R.id.userName)
+     TextInputEditText userName;
+    @BindView(R.id.passWord)
+     TextInputEditText passWord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        userName = findViewById(R.id.userName);
-        passWord = findViewById(R.id.passWord);
-
+        //绑定初始化ButterKnife
+        ButterKnife.bind(this);
+//        userName = findViewById(R.id.userName);
+//        passWord = findViewById(R.id.passWord);
 
 
     }
@@ -45,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 //        String url = "https://www.easy-mock.com/mock/5cf2759064873463eb866334/sell/login";
-        String url = "http://139.155.116.93:8080/login/"+name;
+        String url = "http://39.105.14.128:8080/login/" + name;
         RxHttp.get(url)
 //                .asString()
                 .asObject(User.class)
@@ -73,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void sign(View view) {
-        Intent intent1 =new Intent(LoginActivity.this,SignActivity.class);
+        Intent intent1 = new Intent(LoginActivity.this, SignActivity.class);
         startActivity(intent1);
     }
 }

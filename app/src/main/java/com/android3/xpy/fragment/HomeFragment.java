@@ -44,6 +44,7 @@ public class HomeFragment extends Fragment {
     private Banner banner;
     private RecyclerView shopList;
     private List<Goods> data;
+    final String TAG = "QQQ";
 
     public HomeFragment() {
         // Required empty public constructor
@@ -152,7 +153,7 @@ public class HomeFragment extends Fragment {
 
     public List<Goods> httpGetJson() {
         List<Goods> goods = new ArrayList<>();
-        String url = "http://139.155.116.93:8080/list";
+        String url = "http://39.105.14.128:8080/list";
 //        String url = "https://www.easy-mock.com/mock/5cf2759064873463eb866334/sell/lists";
         RxHttp.get(url)
                 .asString()
@@ -163,7 +164,9 @@ public class HomeFragment extends Fragment {
                     Log.d("QQ", "run: " + goods.toString());
 
                 }, throwable -> {
-                    Toast.makeText(getActivity(), "获取信息失败" + throwable, Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "httpGetJson: ");
+                    Log.d(TAG, "httpGetJson: "+throwable);
+//                    Toast.makeText(getActivity(), "获取信息失败" + throwable, Toast.LENGTH_SHORT).show();
                 });
         return goods;
     }
