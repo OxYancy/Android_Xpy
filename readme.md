@@ -1,18 +1,54 @@
 # 安卓校园 py 项目 3组
 
 ## 简介
+随着现在高校的扩招和校园信息化,网上交易的人日益增长, 。二手交易在大学校园里面越来越多，一方面，大学生热衷潮流，消费需求较旺盛，但也容易因为冲动购物而产生较多的闲置物品；另一方面，大部分大学生经济未独立，资金来源主要是依靠父母，经济能力有限。现在国家倡导可循环经济，人们的环保意识逐渐增强，加之旺盛的需求与滞后的经济能力形成的鲜明反差，为校园二手市场的发展提供了有利的环境。
+该项目以大学生合理利用资源，使大学生之间二手物品交易更加便捷为目的，建立大学生二手物品交易APP平台，使大学生可以发布自己的二手物品或求购请求。
+
+## 功能模块
+
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130554.png?token=AD56OBLKUFE3GPYRHASFXX25CBNHG)
+
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130643.png?token=AD56OBMJG4XFWO54OSTLOX25CBNKI)
+
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130656.png?token=AD56OBIIC7ZBWHJW4BGNGKK5CBNLC)
 
 
 
-## 安排
+## 主要技术
 
-as3.4.1  jdk8 
+1. 开发环境: Android Studio 3.4.1 JDK 1.8 Gradle 5.1.1
 
-okhttp
+2. 后台环境:Idea 2019.1.3 JDK1.8 Maven2.7.7 SpringBoot 2.1.5
 
-RecyclerView
+3. App用到的外部包: 
 
-centos7.5
+   - Material材质设计 :用于美化整个App
+
+   - Banner滑动组件 : 用于主页商品展示页面
+
+   - Glide 图片显示 : 用于请求网络图片,和展示图片
+
+   - ButterKnife View注入框架 : 用于注入View
+
+   - RecycleView 列表 : 用于显示商品列表
+
+   - SearchLayout 搜索框 :用于搜索商品
+
+   - RxHttp 网络请求: 用于实现App和后台交互 ***RxHttp要rebuild一下**
+
+   - Gson : 解析网络获取的数据
+
+     ![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130817.png?token=AD56OBJGAJXBGS57GOYEP225CBNQI)
+
+4. 后台用到的技术:
+
+   - Jpa持久层框架: 实现对数据库的增删改查
+
+   - Lombok:注解的方式，在编译时自动为属性生成构造器、getter/setter、equals、hashcode、toString 方法
+
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130915.png?token=AD56OBNNNU5KCX7BMV27VAK5CBNTY)
+
+
 
 
 
@@ -25,40 +61,45 @@ centos7.5
 | 商品详情页          | 显示价格,图片,商品描述            | 谢函峰 |
 | 用户注册登陆/启动页 | 手机验证,密码验证,                | 毛少文 |
 | 我的页面            | 头像,名字,添加商品 | 刘雨航 |
-| 搭建后台            |                                   | 杨超   |
-| 数据库建表          | 商品详情表,个人信息表,商品表,     | 杨超   |
+| 搭建后台            |                                   | Yacny |
+| 数据库建表          | 商品详情表,个人信息表,商品表,     | Yancy |
+
 
 
 ## 界面
 
-登陆
+### 登陆页
 
-![](https://pic.superbed.cn/item/5cf08904451253d17843c74e)
-注册
+> 打开app如果没有登陆过就会跳转到登陆页进行登陆,没有账号可以进行注册
 
-![](https://pic1.superbed.cn/item/5cf0891e451253d17843c85f)
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130951.png?token=AD56OBLF2JTL5XZJ6SY7WKC5CBNWA)
 
-主页
+### 注册页
 
-![](https://pic.superbed.cn/item/5cf08941451253d17843caae)
+> 注册完后就可以登陆了
 
-分类
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131043.png?token=AD56OBLO5CSICDW22YLB66C5CBNZI)
 
-[![](https://ae01.alicdn.com/kf/HTB1kH5ba3aH3KVjSZFj763FWpXad.png)](https://ae01.alicdn.com/kf/HTB1kH5ba3aH3KVjSZFj763FWpXad.png)
+### 主页
 
-购物车
+> 登陆成功跳转到主页,在主页你可以选择喜欢的商品进行交易
 
-[![](https://puui.qpic.cn/fans_admin/0/3_1379495610_1559268382351/0)](https://puui.qpic.cn/fans_admin/0/3_1379495610_1559268382351/0)
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131118.png?token=AD56OBOGBZDA5P5DK4ZWQ4K5CBN4A)
 
-个人
+### 商品详见页
 
-[![](https://ae01.alicdn.com/kf/HTB1tGica.GF3KVjSZFm762qPXXaU.png)](https://ae01.alicdn.com/kf/HTB1tGica.GF3KVjSZFm762qPXXaU.png)
+> 在这里你可以查看喜欢的商品进行交易
 
-详见
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131208.png?token=AD56OBLLKUXAPQEYOB6GZXK5CBN7C)
 
-[![](https://ae01.alicdn.com/kf/HTB1Pe1ea9WD3KVjSZSg5jcCxVXa3.gif)](https://ae01.alicdn.com/kf/HTB1Pe1ea9WD3KVjSZSg5jcCxVXa3.gif)
+### 搜索页
 
-聊天界面
+> 搜索页,你可以搜索想要的商品
 
-[![](https://ae01.alicdn.com/kf/HTB1XTaca.GF3KVjSZFv5jb_nXXan.gif)](https://ae01.alicdn.com/kf/HTB1XTaca.GF3KVjSZFv5jb_nXXan.gif)
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131406.png?token=AD56OBOC4VTZDTAHEUZHLJ25CBOF6)
 
+### 我的页面
+
+> 可以管理我的账号,发布交易信息
+
+![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131231.png?token=AD56OBLTLWLMVY7EE7OSZGC5CBOAC)
