@@ -6,11 +6,11 @@
 
 ## 功能模块
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130554.png?token=AD56OBLKUFE3GPYRHASFXX25CBNHG)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132244.png)
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130643.png?token=AD56OBMJG4XFWO54OSTLOX25CBNKI)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132252.png)
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130656.png?token=AD56OBIIC7ZBWHJW4BGNGKK5CBNLC)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132300.png)
 
 
 
@@ -38,7 +38,7 @@
 
    - Gson : 解析网络获取的数据
 
-     ![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130817.png?token=AD56OBJGAJXBGS57GOYEP225CBNQI)
+     ![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132158.png)
 
 4. 后台用到的技术:
 
@@ -46,7 +46,7 @@
 
    - Lombok:注解的方式，在编译时自动为属性生成构造器、getter/setter、equals、hashcode、toString 方法
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130915.png?token=AD56OBNNNU5KCX7BMV27VAK5CBNTY)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132204.png)
 
 
 
@@ -72,34 +72,35 @@
 
 > 打开app如果没有登陆过就会跳转到登陆页进行登陆,没有账号可以进行注册
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624130951.png?token=AD56OBLF2JTL5XZJ6SY7WKC5CBNWA)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132139.png)
 
 ### 注册页
 
 > 注册完后就可以登陆了
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131043.png?token=AD56OBLO5CSICDW22YLB66C5CBNZI)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132138.png)
 
 ### 主页
 
 > 登陆成功跳转到主页,在主页你可以选择喜欢的商品进行交易
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131118.png?token=AD56OBOGBZDA5P5DK4ZWQ4K5CBN4A)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132159.png)
 
 ### 商品详见页
 
 > 在这里你可以查看喜欢的商品进行交易
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131208.png?token=AD56OBLLKUXAPQEYOB6GZXK5CBN7C)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132142.png)
 
 ### 搜索页
 
 > 搜索页,你可以搜索想要的商品
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131406.png?token=AD56OBOC4VTZDTAHEUZHLJ25CBOF6)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132141.png)
 
 ### 我的页面
 
 > 可以管理我的账号,发布交易信息
 
-![](https://raw.githubusercontent.com/986244073/yancy-picGo/master/img/20190624131231.png?token=AD56OBLTLWLMVY7EE7OSZGC5CBOAC)
+![](http://pte4vw7ek.bkt.clouddn.com/img/20190624132140.png)
+
